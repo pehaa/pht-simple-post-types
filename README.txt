@@ -1,0 +1,26 @@
+=== PHT Simple Post Types ===
+Contributors: pehaa
+Tags: wordpress, wordpress plugin, plugin, custom post type, custom taxonomy, simple
+Requires at least: 3.6.0
+Tested up to: 4.2.2
+Stable tag: 1.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Upload `pht-simple-post-types` to the `/wp-content/plugins/` directory
+
+== Description ==
+
+Coming soon
+
+== Installation ==
+
+Upload `pht-simple-widget-areas` to the `/wp-content/plugins/` directory
+
+== Frequently Asked Questions ==
+
+Coming soon
+
+== Changelog ==
+= 1.0.0 =
+* Initial release.
