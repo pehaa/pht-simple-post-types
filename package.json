@@ -2,13 +2,13 @@
   "name": "pht-simple-post-types",
   "version": "1.0.0",
   "description": "A WordPress plugin.",
-  "main": "filename.php",
+  "main": "simple-post-types.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "http://repo-url.com"
+    "url": "http://github.com/pehaa/pht-simple-post-types"
   },
   "keywords": [
     "wordpress"
