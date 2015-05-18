@@ -14,9 +14,10 @@
  * Author URI:        http://wptemplates.pehaa.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       simple-post-types
+ * Text Domain:       pht-simple-post-types
  * Domain Path:       /languages
  * GitHub Plugin URI: https://github.com/pehaa/pht-simple-post-types
+ * GitHub Branch:     master
  */
 
 // If this file is called directly, abort.

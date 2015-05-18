@@ -7,7 +7,7 @@
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-Upload `pht-simple-post-types` to the `/wp-content/plugins/` directory
+Adds custom post types and taxonomies
 
 ## Description ##
 
