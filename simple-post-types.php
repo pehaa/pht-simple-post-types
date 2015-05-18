@@ -1,13 +1,13 @@
 <?php
 /**
  *
- * @link              https://github.com/pehaa/pht-simple-post-types
+ * @link              http://github.com/pehaa/pht-simple-post-types
  * @since             1.0.0
  * @package           PHT_Simple_Post_Types
  *
  * @wordpress-plugin
  * Plugin Name:       PHT Simple Post Types
- * Plugin URI:        https://github.com/pehaa/pht-simple-post-types
+ * Plugin URI:        http://github.com/pehaa/pht-simple-post-types
  * Description:       Adds custom post types and taxonomies
  * Version:           1.0.0
  * Author:            PeHaa THEMES

@@ -79,7 +79,7 @@ module.exports = function(grunt) {
             }
         },
         zip: {
-            'simple-post-types.zip': [
+            'pht-simple-post-types.zip': [
                 '**.php',
                 'admin/css/**',
                 'admin/js/**',
