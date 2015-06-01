@@ -106,7 +106,9 @@ class PHT_Simple_Post_Types_Validation {
 			return false;
 		}
 
-		if ( in_array( $this->field[ 'key' ], PHT_Simple_Post_Types_Admin::get_reserved_terms()[ $itemtype ] ) ) {
+		$reserved_terms = PHT_Simple_Post_Types_Admin::get_reserved_terms();
+
+		if ( in_array( $this->field[ 'key' ], $reserved_terms[ $itemtype ] ) ) {
 			$this->screen_message = 'error-' . ( 'post_type' === $itemtype ? 6 : 7 );
 			return false;
 		}

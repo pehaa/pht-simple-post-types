@@ -202,6 +202,8 @@ class PHT_Simple_Post_Types_Admin {
 	 */
 	public function enqueue_scripts() {
 
+		$notifications = $this->notifications();
+
 		if ( $this->viewing_this_plugin() ) {
 			wp_enqueue_script( $this->plugin_name . '-admin-script', plugin_dir_url( __FILE__ ) . 'js/simple-post-types-admin.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-accordion', 'jquery-effects-core' ), $this->version, false );
 			wp_localize_script(
@@ -209,7 +211,7 @@ class PHT_Simple_Post_Types_Admin {
 				'phtspt_data',
 				array(
 					'reserved_terms' => self::get_reserved_terms(),
-					'error_messages' => $this->notifications()['error'],
+					'error_messages' => $notifications['error'],
 					'confirmation'=> apply_filters( 'phtspt_confirmation_question' , __( 'Are you sure you want to unregister this item?', $this->plugin_name ) ) )
 			);
 		}
@@ -390,16 +392,18 @@ class PHT_Simple_Post_Types_Admin {
 
 		if ( isset( $_GET['msg'] ) ) :
 
+			$notifications = $this->notifications();
+
 			preg_match( '/\A(updated|error)-(\d+)\z/', $_GET['msg'], $matches );
 
-		if ( $matches && isset( $this->notifications()[$matches[1]][$matches[2]] ) ) { ?>
+			if ( $matches && isset( $notifications[$matches[1]][$matches[2]] ) ) { ?>
 				<div id="message" class="phtspt-message <?php echo $matches[1]; ?>">
-					<?php echo $this->notifications()[$matches[1]][$matches[2]]; ?>
+					<?php echo $notifications[$matches[1]][$matches[2]]; ?>
 				</div>
 				<?php if ( 'updated' === $matches[1] ) {
-				flush_rewrite_rules();
-			} ?>
-			<?php }
+					flush_rewrite_rules();
+				}
+			}
 
 		endif;
 	}

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PHT Simple Post Types 1.0.0\n"
 "Report-Msgid-Bugs-To: info@pehaa.com\n"
-"POT-Creation-Date: 2015-05-18 06:47:42+00:00\n"
+"POT-Creation-Date: 2015-05-18 07:24:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -317,7 +317,7 @@ msgid "PHT Simple Post Types"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/pehaa/pht-simple-post-types"
+msgid "http://github.com/pehaa/pht-simple-post-types"
 msgstr ""
 
 #. Description of the plugin/theme
