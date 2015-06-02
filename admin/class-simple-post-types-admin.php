@@ -253,7 +253,7 @@ class PHT_Simple_Post_Types_Admin {
 		 */
 		$this->plugin_screen_hook_suffix[] = add_menu_page(
 			__( 'Simple Post Types & Taxonomies', $this->plugin_name ),
-			__( 'SPTypes', $this->plugin_name ),
+			__( 'PHT SPTypes', $this->plugin_name ),
 			'manage_options',
 			$this->manage_page,
 			array( $this, 'display_plugin_admin_page' ),
