@@ -1,4 +1,4 @@
-/*! pht-simple-post-types 1.0.0 filename.css 2015-05-18 9:24:06 AM */
+/*! pht-simple-post-types 1.0.0 filename.css 2015-06-02 10:48:40 AM */
 
 .phtspt-form {
   line-height: 24px;
@@ -185,7 +185,6 @@ div.phtspt-message {
 .phtspt-items--post_type td,
 .phtspt-more td {
   border-bottom: 1px solid #ddd;
-  text-align: right;
 }
 .phtspt-items--post_type td form,
 .phtspt-more td form {
@@ -194,6 +193,10 @@ div.phtspt-message {
 .phtspt-items--post_type td .phtspt-with-button,
 .phtspt-more td .phtspt-with-button {
   display: inline-block;
+}
+
+.phtspt-more td {
+  text-align: right;
 }
 
 /*# sourceMappingURL=simple-post-types-admin.css.map */

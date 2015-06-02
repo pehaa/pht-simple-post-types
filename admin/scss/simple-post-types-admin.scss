@@ -154,9 +154,11 @@ $legend_bg : PEACHPUFF;
 .phtspt-items--post_type td,
 .phtspt-more td {
 	border-bottom: 1px solid #ddd;
-	text-align: right;
 	form {text-align: left;}
 	.phtspt-with-button {
 		display: inline-block;
 	}
+}
+.phtspt-more td {
+	text-align:right;
 }
