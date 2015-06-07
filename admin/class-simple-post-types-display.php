@@ -69,14 +69,14 @@ class PHT_Simple_Post_Types_Admin_Display {
 	}
 
 	public function slug_form_field( $itemtype ) {
-		$label = 'post_type' === $itemtype ? __( 'New custom post type slug (required):', $this->plugin_name) : __( 'New custom taxonomy slug:', $this->plugin_name );
+		$label = 'post_type' === $itemtype ? __( 'New custom post type slug (required):', $this->plugin_name ) : __( 'New custom taxonomy slug:', $this->plugin_name );
 		$placeholder = __( 'Put a unique name here', $this->plugin_name );
 		$data_regex = "data-regex='$itemtype-slug'";
 		$this->form_field_text( 'phtspt_field-' . $itemtype . '-key', 'phtspt_field[key]', 'phtspt-required phtspt-regex', $label, $placeholder, $this->slug_form_field_legend( $itemtype ), $data_regex );
 	}
 
 	public function name_form_field( $itemtype ) {
-		$label = 'post_type' === $itemtype ? __( 'Custom post type name in plural form (required):', $this->plugin_name) : __( 'Custom taxonomy name (plural form):', $this->plugin_name );
+		$label = 'post_type' === $itemtype ? __( 'Custom post type name in plural form (required):', $this->plugin_name ) : __( 'Custom taxonomy name (plural form):', $this->plugin_name );
 		$placeholder = __( 'Put a name here', $this->plugin_name );
 		$legend = 'post_type' === $itemtype ? __( 'General name for post type, <b>usually plural.</b> This string will be also used  for menu items.', $this->plugin_name ) : __( 'General name for taxonomies, <b>usually plural.</b> This string will be also used  for menu items.' );
 		$data_regex = 'data-regex="label"';
@@ -84,7 +84,7 @@ class PHT_Simple_Post_Types_Admin_Display {
 	}
 
 	public function singular_name_form_field( $itemtype ) {
-		$label = 'post_type' === $itemtype ? __( 'Custom post type name in singular form (required):', $this->plugin_name) : __( 'Custom taxonomy name (singular form):', $this->plugin_name );
+		$label = 'post_type' === $itemtype ? __( 'Custom post type name in singular form (required):', $this->plugin_name ) : __( 'Custom taxonomy name (singular form):', $this->plugin_name );
 		$placeholder = __( 'Put a name here', $this->plugin_name );
 		$legend = 'post_type' === $itemtype ? __( 'Name for one object of this post type. Also used for the "Add New" dropdown on admin bar. ', $this->plugin_name ) : __( 'Name for one object of this taxonomy.' );
 		$data_regex = 'data-regex="label"';

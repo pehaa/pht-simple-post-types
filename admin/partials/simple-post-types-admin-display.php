@@ -22,13 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<h2><?php echo esc_html( get_admin_page_title() ); ?></h2> 
 	
-	<?php if ( is_array( $this->options[ 'data' ] ) && ( !empty( $this->options[ 'data' ][ 'post_type'] ) || !empty( $this->options[ 'data' ][ 'taxonomy' ] ) ) ) { ?>
+	<?php if ( is_array( $this->options['data'] ) && ( !empty( $this->options['data']['post_type'] ) || !empty( $this->options['data']['taxonomy'] ) ) ) { ?>
 	
 	<section class="phtspt-section">
 	
 		<h3><?php _e( 'Registered custom post types and taxonomies', $this->plugin_name); ?></h3>
 
-		<?php foreach ( $this->options[ 'data' ] as $item => $item_options ) {
+		<?php foreach ( $this->options['data'] as $item => $item_options ) {
 			if ( count( $item_options ) ) { ?>
 			<h4><?php echo 'taxonomy' === $item ? __( 'Taxonomies:', $this->plugin_name ) : __( 'Post types:', $this->plugin_name ); ?></h4>
 			<table class='phtspt-items phtspt-items--<?php echo $item; ?>'>
@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$delete_path = wp_nonce_url( admin_url( 'admin.php?page=' . $this->manage_page . '&deleteid=' . $key . '&itemtype=' . $item ), $this->plugin_name . '_' . $item . '_delete_nonce' ); ?>
 				<tr>
 					<td><?php echo $key; ?></td>
-					<td><?php echo $array[ 'name' ]; ?></td>
+					<td><?php echo $array['name']; ?></td>
 					<td class="phtspt-with-button">
 						<a id="remove-<?php echo $key; ?>" data-remove="<?php echo $key; ?>" class="js-phtspt-confirm phtspt-button-remove button-primary" href="<?php echo $delete_path; ?>">
 							<i class="dashicons dashicons-trash"></i>

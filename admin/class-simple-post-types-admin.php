@@ -298,7 +298,7 @@ class PHT_Simple_Post_Types_Admin {
 	}
 
 	private function update_database() {
-		update_option( $this->options[ 'slug' ], $this->options[ 'data' ] );
+		update_option( $this->options['slug'], $this->options['data'] );
 	}
 
 	private function update_options_on_add( $itemtype ) {
@@ -311,14 +311,14 @@ class PHT_Simple_Post_Types_Admin {
 
 			if ( $validator->validate( $_POST, 'add', $itemtype ) ) {
 
-				$this->options[ 'data' ][ $itemtype ][$validator->field['key']] = array(
+				$this->options['data'][ $itemtype ][ $validator->field['key'] ] = array(
 					'name' => $validator->field['name'],
 					'singular_name' => $validator->field['singular_name']
 				);
 
 				if ( 'taxonomy' === $itemtype ) {
-					$this->options[ 'data' ][ $itemtype ][$validator->field['key']]['object_types'] = $validator->field['phtspt-object-type'];
-					$this->options[ 'data' ][ $itemtype ][$validator->field['key']]['hierarchical'] = $validator->field['phtspt-hierarchical'];
+					$this->options['data'][ $itemtype ][ $validator->field['key'] ]['object_types'] = $validator->field['phtspt-object-type'];
+					$this->options['data'][ $itemtype ][ $validator->field['key'] ]['hierarchical'] = $validator->field['phtspt-hierarchical'];
 				}
 
 				$this->update_database();
@@ -333,16 +333,16 @@ class PHT_Simple_Post_Types_Admin {
 
 	private function update_options_on_edit_taxonomy() {
 
-		if ( isset( $_POST[ $this->submit['edit_taxonomy'] ] ) && isset( $_POST[ 'phtspt_field' ]['key'] ) ) {
+		if ( isset( $_POST[ $this->submit['edit_taxonomy'] ] ) && isset( $_POST['phtspt_field']['key'] ) ) {
 
-			check_admin_referer( $this->nonce['edit_taxonomy'] . '_' .  $_POST[ 'phtspt_field' ]['key'] );
+			check_admin_referer( $this->nonce['edit_taxonomy'] . '_' .  $_POST['phtspt_field']['key'] );
 
 			$validator = new PHT_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
 
 			if ( $validator->validate( $_POST, 'edit', 'taxonomy' ) ) {
 
-				$this->options[ 'data' ][ 'taxonomy' ][$validator->field['key']]['object_types'] = $validator->field['phtspt-object-type'];
-				$this->options[ 'data' ][ 'taxonomy' ][$validator->field['key']]['hierarchical'] = $validator->field['phtspt-hierarchical'];
+				$this->options['data']['taxonomy'][ $validator->field['key'] ]['object_types'] = $validator->field['phtspt-object-type'];
+				$this->options['data']['taxonomy'][ $validator->field['key'] ]['hierarchical'] = $validator->field['phtspt-hierarchical'];
 
 				$this->update_database();
 
@@ -356,18 +356,18 @@ class PHT_Simple_Post_Types_Admin {
 
 	private function update_options_on_remove( $itemtype ) {
 
-		if ( isset( $_GET[ '_wpnonce' ] ) && wp_verify_nonce( $_GET[ '_wpnonce' ], $this->plugin_name .'_' . $itemtype . '_delete_nonce' ) ) {
+		if ( isset( $_GET['_wpnonce'] ) && wp_verify_nonce( $_GET['_wpnonce'], $this->plugin_name .'_' . $itemtype . '_delete_nonce' ) ) {
 
 			$validator = new PHT_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
 
 			if ( $validator->validate( $_GET, 'delete', $itemtype ) ) {
 
-				unset( $this->options[ 'data' ][ $itemtype ][ $validator->field['key'] ] );
+				unset( $this->options['data'][ $itemtype ][ $validator->field['key'] ] );
 
 				if ( 'post_type' === $itemtype ) {
-					foreach ( $this->options[ 'data' ][ 'taxonomy' ] as $key => $array ) {
+					foreach ( $this->options['data']['taxonomy'] as $key => $array ) {
 						if ( is_array( $array['object_types'] ) && in_array( $validator->field['key'], $array['object_types'] ) ) {
-							unset( $this->options[ 'data' ][ 'taxonomy' ][ $key ]['object_types'][ array_search( $validator->field['key'], $array['object_types'] ) ] );
+							unset( $this->options['data']['taxonomy'][ $key ]['object_types'][ array_search( $validator->field['key'], $array['object_types'] ) ] );
 						}
 					}
 				}
@@ -396,9 +396,9 @@ class PHT_Simple_Post_Types_Admin {
 
 			preg_match( '/\A(updated|error)-(\d+)\z/', $_GET['msg'], $matches );
 
-			if ( $matches && isset( $notifications[$matches[1]][$matches[2]] ) ) { ?>
+			if ( $matches && isset( $notifications[ $matches[1] ][ $matches[2] ] ) ) { ?>
 				<div id="message" class="phtspt-message <?php echo $matches[1]; ?>">
-					<?php echo $notifications[$matches[1]][$matches[2]]; ?>
+					<?php echo $notifications[ $matches[1] ][ $matches[2] ]; ?>
 				</div>
 				<?php if ( 'updated' === $matches[1] ) {
 					flush_rewrite_rules();

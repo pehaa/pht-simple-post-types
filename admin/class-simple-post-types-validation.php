@@ -97,8 +97,8 @@ class PHT_Simple_Post_Types_Validation {
 		$data['phtspt_field']['singular_name'] = trim( $data['phtspt_field']['singular_name'] );
 		$this->field = $data['phtspt_field'];
 
-		if ( !preg_match( $this->regex_pattern[ $itemtype ], $this->field[ 'key' ] ) ) {
-			if ( '' === $this->field[ 'key' ] ) {
+		if ( !preg_match( $this->regex_pattern[ $itemtype ], $this->field['key'] ) ) {
+			if ( '' === $this->field['key'] ) {
 				$this->screen_message = 'error-5';
 			} else {
 				$this->screen_message = 'error-' . ( 'post_type' === $itemtype ? 3 : 4 );
@@ -108,13 +108,13 @@ class PHT_Simple_Post_Types_Validation {
 
 		$reserved_terms = PHT_Simple_Post_Types_Admin::get_reserved_terms();
 
-		if ( in_array( $this->field[ 'key' ], $reserved_terms[ $itemtype ] ) ) {
+		if ( in_array( $this->field['key'], $reserved_terms[ $itemtype ] ) ) {
 			$this->screen_message = 'error-' . ( 'post_type' === $itemtype ? 6 : 7 );
 			return false;
 		}
 
-		if ( !preg_match( $this->regex_pattern[ 'label' ], $this->field[ 'name' ] ) ) {
-			if ( '' === $this->field[ 'name' ] ) {
+		if ( !preg_match( $this->regex_pattern['label'], $this->field['name'] ) ) {
+			if ( '' === $this->field['name'] ) {
 				$this->screen_message = 'error-5';
 			} else {
 				$this->screen_message = 'error-8';
@@ -122,8 +122,8 @@ class PHT_Simple_Post_Types_Validation {
 			return false;
 		}
 
-		if ( !preg_match( $this->regex_pattern[ 'label' ], $this->field[ 'singular_name' ] ) ) {
-			if ( '' === $this->field[ 'singular_name' ] ) {
+		if ( !preg_match( $this->regex_pattern['label'], $this->field['singular_name'] ) ) {
+			if ( '' === $this->field['singular_name'] ) {
 				$this->screen_message = 'error-5';
 			} else {
 				$this->screen_message = 'error-8';
@@ -196,8 +196,8 @@ class PHT_Simple_Post_Types_Validation {
 
 	private function validate_object_type() {
 
-		if ( isset( $this->field[ 'phtspt-object-type' ] ) && is_array( $this->field[ 'phtspt-object-type' ] ) ) {
-			foreach($this->field[ 'phtspt-object-type' ] as $object_type ) {
+		if ( isset( $this->field['phtspt-object-type'] ) && is_array( $this->field['phtspt-object-type'] ) ) {
+			foreach($this->field['phtspt-object-type'] as $object_type ) {
 				if ( !array_key_exists( $object_type, $this->options['data']['post_type'] ) ) {
 					$this->screen_message = 'error-11';
 					return false;
@@ -205,20 +205,20 @@ class PHT_Simple_Post_Types_Validation {
 
 			}
 		} else {
-			$this->field[ 'phtspt-object-type' ] = array();
+			$this->field['phtspt-object-type'] = array();
 		}
 		return true;
 
 	}
 
 	private function validate_hierarchical() {
-		if ( isset( $this->field[ 'phtspt-hierarchical' ] ) ) {
-			if ( !in_array( $this->field[ 'phtspt-hierarchical' ], array( 'yes', 'no') ) ) {
+		if ( isset( $this->field['phtspt-hierarchical'] ) ) {
+			if ( !in_array( $this->field['phtspt-hierarchical'], array( 'yes', 'no') ) ) {
 				$this->screen_message = 'error-12';
 				return false;
 			}
 		} else {
-			$this->field[ 'phtspt-hierarchical' ] = 'yes';
+			$this->field['phtspt-hierarchical'] = 'yes';
 		}
 		return true;
 
