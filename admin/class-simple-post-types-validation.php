@@ -155,7 +155,7 @@ class PHT_Simple_Post_Types_Validation {
 		
 		$this->field['key'] =  $_GET['deleteid'];
 		
-		if ( !array_key_exists( $this->field['key'], $this->options['data'][$itemtype] ) ) {
+		if ( !array_key_exists( $this->field['key'], $this->options['data'][ $itemtype ] ) ) {
 			$this->screen_message = 'error-10';
 			return false;
 		}
