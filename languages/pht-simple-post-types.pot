@@ -2,9 +2,9 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: PHT Simple Post Types 1.0.0\n"
+"Project-Id-Version: PeHaa Themes Simple Post Types 1.0.0\n"
 "Report-Msgid-Bugs-To: info@pehaa.com\n"
-"POT-Creation-Date: 2015-05-18 07:24:06+00:00\n"
+"POT-Creation-Date: 2015-06-15 07:51:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,101 +13,101 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
 
-#: admin/class-simple-post-types-admin.php:213
+#: admin/class-simple-post-types-admin.php:215
 msgid "Are you sure you want to unregister this item?"
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:253
+#: admin/class-simple-post-types-admin.php:255
 msgid "Simple Post Types & Taxonomies"
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:254
-msgid "SPTypes"
-msgstr ""
-
-#: admin/class-simple-post-types-admin.php:411
-msgid "Custom Post Type has been successfully registered."
-msgstr ""
-
-#: admin/class-simple-post-types-admin.php:412
-msgid "Custom Taxonomy has been successfully registered."
-msgstr ""
-
-#: admin/class-simple-post-types-admin.php:413
-msgid "Custom Post Type has been successfully unregistered."
-msgstr ""
-
-#: admin/class-simple-post-types-admin.php:414
-msgid "Custom Taxonomy has been successfully unregistered."
+#: admin/class-simple-post-types-admin.php:256
+msgid "PHT SPTypes"
 msgstr ""
 
 #: admin/class-simple-post-types-admin.php:415
-msgid "Custom Post Type has been successfully modified."
+msgid "Custom Post Type has been successfully registered."
 msgstr ""
 
 #: admin/class-simple-post-types-admin.php:416
-msgid "Custom Taxonomy has been successfully modified."
+msgid "Custom Taxonomy has been successfully registered."
+msgstr ""
+
+#: admin/class-simple-post-types-admin.php:417
+msgid "Custom Post Type has been successfully unregistered."
+msgstr ""
+
+#: admin/class-simple-post-types-admin.php:418
+msgid "Custom Taxonomy has been successfully unregistered."
 msgstr ""
 
 #: admin/class-simple-post-types-admin.php:419
-msgid "The Custom Post Type/Taxonomy could not have been registered."
+msgid "Custom Post Type has been successfully modified."
 msgstr ""
 
 #: admin/class-simple-post-types-admin.php:420
+msgid "Custom Taxonomy has been successfully modified."
+msgstr ""
+
+#: admin/class-simple-post-types-admin.php:423
+msgid "The Custom Post Type/Taxonomy could not have been registered."
+msgstr ""
+
+#: admin/class-simple-post-types-admin.php:424
 msgid "The Custom Post Type that you are trying to delete does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:421
+#: admin/class-simple-post-types-admin.php:425
 msgid "The Custom Taxonomy that you are trying to delete does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:422
+#: admin/class-simple-post-types-admin.php:426
 msgid ""
 "The Custom Post Type slug cannot contain other characters that digits, "
 "lowercase letters and the underscores."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:423
+#: admin/class-simple-post-types-admin.php:427
 msgid ""
 "The Custom Taxonomy slug cannot contain other characters that digits, "
 "lowercase letters and the underscores."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:424
+#: admin/class-simple-post-types-admin.php:428
 msgid "All required fields must be filled in."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:425
+#: admin/class-simple-post-types-admin.php:429
 msgid ""
 "The submitted Custom Post Type name already exists or is a reserved "
 "WordPress term and cannot be overridden."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:426
+#: admin/class-simple-post-types-admin.php:430
 msgid ""
 "The submitted Custom Taxonomy name already exists or is a reserved "
 "WordPress term and cannot be overridden."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:427
+#: admin/class-simple-post-types-admin.php:431
 msgid ""
 "The labels cannot contain other characters than letters, spaces, hyphens "
 "and underscores (max. length is 15 chars)."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:428
+#: admin/class-simple-post-types-admin.php:432
 msgid "The Custom Post Type that you are trying to modify does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:429
+#: admin/class-simple-post-types-admin.php:433
 msgid "The Custom Taxonomy that you are trying to delete or modify does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:430
+#: admin/class-simple-post-types-admin.php:434
 msgid "Invalid object type."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:431
+#: admin/class-simple-post-types-admin.php:435
 msgid "Invalid type."
 msgstr ""
 
@@ -313,7 +313,7 @@ msgid "Choose from the most used %s"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "PHT Simple Post Types"
+msgid "PeHaa Themes Simple Post Types"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

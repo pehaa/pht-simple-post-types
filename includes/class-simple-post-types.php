@@ -294,7 +294,7 @@ class PHT_Simple_Post_Types {
 			'search_items'        => sprintf( __( 'Search %s', $this->plugin_name ),  $array['singular_name'] ),
 			'not_found'           => __( 'Not found', $this->plugin_name ),
 			'not_found_in_trash'  => __( 'Not found in Trash', $this->plugin_name ),
-			);
+		);
 
 		return apply_filters( $key .'_phtspt_post_type_labels', $labels, $array );
 

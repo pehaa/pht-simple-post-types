@@ -1,4 +1,4 @@
-# PHT Simple Post Types #
+# PeHaa Themes Simple Post Types #
 **Contributors:** pehaa  
 **Tags:** wordpress, wordpress plugin, plugin, custom post type, custom taxonomy, simple  
 **Requires at least:** 3.6.0  

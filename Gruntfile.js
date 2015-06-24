@@ -90,7 +90,8 @@ module.exports = function(grunt) {
                 'languages/**',
                 'images/**',
                 '**.txt',
-                '**.md'
+                '**.md',
+                'plugin-update-checker/**'
             ]
         },
         watch: {
@@ -106,7 +107,31 @@ module.exports = function(grunt) {
                 files: [ 'admin/js/simple-post-types-admin.js' ],
                 tasks: ['uglify:dist']
             }
-        }
+        },
+        "json-replace": {
+            "options": {
+                "space" : "\t",
+                "replace" : {
+                    "name" : '<%= pkg.plugin_name %>',
+                    "slug" : '<%= pkg.name %>',
+                    "version" : '<%= pkg.version %>',
+                    "download_url" : '<%= pkg.download_url %>',
+                    "sections" : {
+                        "description" : '<%= pkg.description %>'
+                    },
+                    "homepage" : '<%= pkg.repository.url %>',
+                    "tested" : '<%= pkg.tested %>',
+                    "author" : '<%= pkg.author %>',
+                    "author_homepage" : '<%= pkg.author_url %>',
+                }
+            },
+            "metadata": {
+                "files" : [{
+                    "src" : "metadata.json",
+                    "dest" : "metadata.json"
+                }]
+            },
+        },
     });
  
 
@@ -120,6 +145,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-zip' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
+    grunt.loadNpmTasks('grunt-json-replace');
  
     grunt.registerTask('default', [
         'makepot',

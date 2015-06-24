@@ -6,7 +6,7 @@
  * @package           PHT_Simple_Post_Types
  *
  * @wordpress-plugin
- * Plugin Name:       PHT Simple Post Types
+ * Plugin Name:       PeHaa Themes Simple Post Types
  * Plugin URI:        http://github.com/pehaa/pht-simple-post-types
  * Description:       Adds custom post types and taxonomies
  * Version:           1.0.0
@@ -16,8 +16,6 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       pht-simple-post-types
  * Domain Path:       /languages
- * GitHub Plugin URI: https://github.com/pehaa/pht-simple-post-types
- * GitHub Branch:     master
  */
 
 // If this file is called directly, abort.
@@ -26,7 +24,6 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 if ( ! defined( 'PHT_SPT_ACTIVATION_DATA_FIELD' ) ) define( 'PHT_SPT_ACTIVATION_DATA_FIELD', 'phtspt-activation' );
-
 
 /**
  * The code that runs during plugin activation.
@@ -71,3 +68,9 @@ function run_simple_post_types() {
 
 }
 run_simple_post_types();
+
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+    'http://wp-plugins.pehaa.com/pht-simple-post-types/metadata.json',
+    __FILE__
+);
