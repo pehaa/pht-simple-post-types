@@ -9,7 +9,7 @@
  * Plugin Name:       PeHaa Themes Simple Post Types
  * Plugin URI:        http://github.com/pehaa/pht-simple-post-types
  * Description:       Adds custom post types and taxonomies
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            PeHaa THEMES
  * Author URI:        http://wptemplates.pehaa.com
  * License:           GPL-2.0+

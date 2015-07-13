@@ -22,5 +22,9 @@ Upload `pht-simple-widget-areas` to the `/wp-content/plugins/` directory
 Coming soon
 
 == Changelog ==
+
+= 1.0.1 =
+* Updated update-plugin-checker
+
 = 1.0.0 =
 * Initial release.

@@ -117,7 +117,8 @@ module.exports = function(grunt) {
                     "version" : '<%= pkg.version %>',
                     "download_url" : '<%= pkg.download_url %>',
                     "sections" : {
-                        "description" : '<%= pkg.description %>'
+                        "description" : '<%= pkg.description %>',
+                        "changelog" : '<%= pkg.changelog %>',
                     },
                     "homepage" : '<%= pkg.repository.url %>',
                     "tested" : '<%= pkg.tested %>',

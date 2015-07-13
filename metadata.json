@@ -1,10 +1,11 @@
 {
 	"name": "PeHaa Themes Simple Post Types",
 	"slug": "pht-simple-post-types",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"download_url": "http://wp-plugins.pehaa.com/pht-simple-post-types/pht-simple-post-types.zip",
 	"sections": {
-		"description": "A WordPress plugin. Adds custom post types and taxonomies."
+		"description": "A WordPress plugin. Adds custom post types and taxonomies.",
+		"changelog": "<strong>1.0.1</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.0</strong><p>Release</p>"
 	},
 	"homepage": "http://github.com/pehaa/pht-simple-post-types",
 	"tested": "4.2.2",
