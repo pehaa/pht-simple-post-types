@@ -1,6 +1,6 @@
 {
   "name": "pht-simple-post-types",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A WordPress plugin. Adds custom post types and taxonomies.",
   "main": "pht-simple-post-types.php",
   "scripts": {
@@ -13,13 +13,13 @@
   "keywords": [
     "wordpress"
   ],
-  "tested" : "4.2.2",
+  "tested" : "4.3",
   "author": "PeHaa THEMES",
   "author_url" : "http://wptemplates.pehaa.com",
   "license": "GPL",
   "plugin_name" : "PeHaa Themes Simple Post Types",
   "download_url" : "http://wp-plugins.pehaa.com/pht-simple-post-types/pht-simple-post-types.zip",
-  "changelog": "<strong>1.0.1</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.0</strong><p>Release</p>",
+  "changelog": "<strong>1.0.3</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.2</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.1</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.0</strong><p>Release</p>",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-copy": "~0.5.0",
