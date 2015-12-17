@@ -6,8 +6,8 @@
  * @link       https://github.com/pehaa/pht-simple-post-types
  * @since      1.0.0
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/admin
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/admin
  */
 
 
@@ -21,11 +21,11 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * 
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/admin
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/admin
  * @author     PeHaa THEMES <info@pehaa.com>
  */
-class PHT_Simple_Post_Types_Validation {
+class PeHaaThemes_Simple_Post_Types_Validation {
 
 	/**
 	 * The ID of this plugin.
@@ -61,7 +61,7 @@ class PHT_Simple_Post_Types_Validation {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-		$this->options = PHT_Simple_Post_Types::$options;		
+		$this->options = PeHaaThemes_Simple_Post_Types::$options;		
 				
 	}
 
@@ -83,19 +83,19 @@ class PHT_Simple_Post_Types_Validation {
 
 	private function validate_on_add( $data, $itemtype ) {
 
-		if ( !isset( $data['phtspt_field'] ) ) {
+		if ( !isset( $data['pehaathemes_spt_field'] ) ) {
 			$this->screen_message = 'error-0';
 			return false;			
 		}
 
-		if ( !isset( $data['phtspt_field']['key'] ) || !isset( $data['phtspt_field']['name'] ) || !isset( $data['phtspt_field']['singular_name'] ) ) {
+		if ( !isset( $data['pehaathemes_spt_field']['key'] ) || !isset( $data['pehaathemes_spt_field']['name'] ) || !isset( $data['pehaathemes_spt_field']['singular_name'] ) ) {
 			$this->screen_message = 'error-0';
 			return false;			
 		}
-		$data['phtspt_field']['key'] = trim( $data['phtspt_field']['key'] );
-		$data['phtspt_field']['name'] = trim( $data['phtspt_field']['name'] );
-		$data['phtspt_field']['singular_name'] = trim( $data['phtspt_field']['singular_name'] );
-		$this->field = $data['phtspt_field'];
+		$data['pehaathemes_spt_field']['key'] = trim( $data['pehaathemes_spt_field']['key'] );
+		$data['pehaathemes_spt_field']['name'] = trim( $data['pehaathemes_spt_field']['name'] );
+		$data['pehaathemes_spt_field']['singular_name'] = trim( $data['pehaathemes_spt_field']['singular_name'] );
+		$this->field = $data['pehaathemes_spt_field'];
 
 		if ( !preg_match( $this->regex_pattern[ $itemtype ], $this->field['key'] ) ) {
 			if ( '' === $this->field['key'] ) {
@@ -106,7 +106,7 @@ class PHT_Simple_Post_Types_Validation {
 			return false;
 		}
 
-		$reserved_terms = PHT_Simple_Post_Types_Admin::get_reserved_terms();
+		$reserved_terms = PeHaaThemes_Simple_Post_Types_Admin::get_reserved_terms();
 
 		if ( in_array( $this->field['key'], $reserved_terms[ $itemtype ] ) ) {
 			$this->screen_message = 'error-' . ( 'post_type' === $itemtype ? 6 : 7 );
@@ -169,17 +169,17 @@ class PHT_Simple_Post_Types_Validation {
 
 		if ( 'taxonomy'  === $itemtype ) {
 
-			if ( !isset( $data['phtspt_field'] ) ) {
+			if ( !isset( $data['pehaathemes_spt_field'] ) ) {
 				$this->screen_message = 'error-0';
 				return false;			
 			}
 
-			if ( !isset( $data['phtspt_field']['key'] ) ) {
+			if ( !isset( $data['pehaathemes_spt_field']['key'] ) ) {
 				$this->screen_message = 'error-0';
 				return false;			
 			}
 
-			$this->field = $data['phtspt_field'];
+			$this->field = $data['pehaathemes_spt_field'];
 
 			if ( !$this->validate_object_type() )
 				return false;

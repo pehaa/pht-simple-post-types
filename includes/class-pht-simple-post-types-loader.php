@@ -6,8 +6,8 @@
  * @link       https://github.com/pehaa/pht-simple-post-types
  * @since      1.0.0
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/includes
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/includes
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/includes
  * @author     PeHaa THEMES <info@pehaa.com>
  */
-class PHT_Simple_Post_Types_Loader {
+class PeHaaThemes_Simple_Post_Types_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

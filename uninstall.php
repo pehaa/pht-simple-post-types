@@ -7,7 +7,7 @@
  * @link       https://github.com/pehaa/pht-simple-post-types
  * @since      1.0.0
  *
- * @package    PHT_Simple_Post_Types
+ * @package    PeHaaThemes_Simple_Post_Types
  */
 
 // If uninstall not called from WordPress, then exit.
@@ -21,7 +21,7 @@ if ( $clean_data ) {
 
 	global $wpdb;
 
-	$option_name = 'pht_simple_post_types';
+	$option_name = 'pehaathemes_simple_post_types';
 	$activation_option_name = 'phtspt-activation';
 
 	$option = get_option( $option_name );

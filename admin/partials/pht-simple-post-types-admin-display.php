@@ -8,8 +8,8 @@
  * @link       https://github.com/pehaa/pht-simple-post-types
  * @since      1.0.0
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/admin/partials
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/admin/partials
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -64,9 +64,9 @@ dashicons-edit"></i><?php _e( 'Quick edit', $this->plugin_name ); ?></a></header
 
 							$display->object_types_form_field( $key, $array['object_types'] ); ?>
 
-							<input id="phtspt-key" type="hidden"  name="phtspt_field[key]" value="<?php echo $key; ?>" />
+							<input id="phtspt-key" type="hidden"  name="pehaathemes_spt_field[key]" value="<?php echo $key; ?>" />
 							<input id="phtspt-item" type="hidden"  name="phtspt-item" value="taxonomy" />
-							<input id="<?php echo $this->submit;?>" type="submit" class="button-primary phtspt-button phtspt-button-add" name="<?php echo $this->submit['edit_taxonomy'];?>" value="<?php _e( 'Submit', $this->plugin_name ); ?>" />
+							<input id="<?php echo $this->submit['edit_taxonomy'];?>" type="submit" class="button-primary phtspt-button phtspt-button-add" name="<?php echo $this->submit['edit_taxonomy'];?>" value="<?php _e( 'Submit', $this->plugin_name ); ?>" />
 								
 						</form>
 				

@@ -6,8 +6,8 @@
  * @link       https://github.com/pehaa/pht-simple-post-types
  * @since      1.0.0
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/admin
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/admin
  */
 
 // If this file is called directly, abort.
@@ -20,11 +20,11 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * 
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/admin
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/admin
  * @author     PeHaa THEMES <info@pehaa.com>
  */
-class PHT_Simple_Post_Types_Admin_Display {
+class PeHaaThemes_Simple_Post_Types_Admin_Display {
 
 	/**
 	 * The ID of this plugin.
@@ -55,14 +55,14 @@ class PHT_Simple_Post_Types_Admin_Display {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-		$this->options = PHT_Simple_Post_Types::$options;
+		$this->options = PeHaaThemes_Simple_Post_Types::$options;
 		$this->reserved_slugs();
 
 	}
 
 	private function reserved_slugs() {
 		
-		$reserved_terms = PHT_Simple_Post_Types_Admin::get_reserved_terms();
+		$reserved_terms = PeHaaThemes_Simple_Post_Types_Admin::get_reserved_terms();
 		$this->reserved_post_type_terms = implode( ', ', array_values( $reserved_terms['post_type'] ) );
 		$this->reserved_taxonomy_terms = implode( ', ', array_values($reserved_terms['taxonomy'] ) );
 
@@ -72,7 +72,7 @@ class PHT_Simple_Post_Types_Admin_Display {
 		$label = 'post_type' === $itemtype ? __( 'New custom post type slug (required):', $this->plugin_name ) : __( 'New custom taxonomy slug:', $this->plugin_name );
 		$placeholder = __( 'Put a unique name here', $this->plugin_name );
 		$data_regex = "data-regex='$itemtype-slug'";
-		$this->form_field_text( 'phtspt_field-' . $itemtype . '-key', 'phtspt_field[key]', 'phtspt-required phtspt-regex', $label, $placeholder, $this->slug_form_field_legend( $itemtype ), $data_regex );
+		$this->form_field_text( 'pehaathemes_spt_field-' . $itemtype . '-key', 'pehaathemes_spt_field[key]', 'phtspt-required phtspt-regex', $label, $placeholder, $this->slug_form_field_legend( $itemtype ), $data_regex );
 	}
 
 	public function name_form_field( $itemtype ) {
@@ -80,7 +80,7 @@ class PHT_Simple_Post_Types_Admin_Display {
 		$placeholder = __( 'Put a name here', $this->plugin_name );
 		$legend = 'post_type' === $itemtype ? __( 'General name for post type, <b>usually plural.</b> This string will be also used  for menu items.', $this->plugin_name ) : __( 'General name for taxonomies, <b>usually plural.</b> This string will be also used  for menu items.' );
 		$data_regex = 'data-regex="label"';
-		$this->form_field_text( 'phtspt_field-' . $itemtype . '-name', 'phtspt_field[name]', 'phtspt-required phtspt-regex', $label, $placeholder, $legend, $data_regex );
+		$this->form_field_text( 'pehaathemes_spt_field-' . $itemtype . '-name', 'pehaathemes_spt_field[name]', 'phtspt-required phtspt-regex', $label, $placeholder, $legend, $data_regex );
 	}
 
 	public function singular_name_form_field( $itemtype ) {
@@ -88,14 +88,14 @@ class PHT_Simple_Post_Types_Admin_Display {
 		$placeholder = __( 'Put a name here', $this->plugin_name );
 		$legend = 'post_type' === $itemtype ? __( 'Name for one object of this post type. Also used for the "Add New" dropdown on admin bar. ', $this->plugin_name ) : __( 'Name for one object of this taxonomy.' );
 		$data_regex = 'data-regex="label"';
-		$this->form_field_text( 'phtspt_field-' . $itemtype . '-singular_name', 'phtspt_field[singular_name]', 'phtspt-required phtspt-regex', $label, $placeholder, $legend, $data_regex );
+		$this->form_field_text( 'pehaathemes_spt_field-' . $itemtype . '-singular_name', 'pehaathemes_spt_field[singular_name]', 'phtspt-required phtspt-regex', $label, $placeholder, $legend, $data_regex );
 	}
 
 	public function hierarchical_form_field( $id = 'phtspt-hierarchical-new', $hierarchical = NULL ) { ?>
 
 		<div class="form-field">
 			<label for="<?php echo $id; ?>"><?php _e( 'Hierarchical', $this->plugin_name ); ?></label>
-			<select id="<?php echo $id; ?>" name="phtspt_field[phtspt-hierarchical]">
+			<select id="<?php echo $id; ?>" name="pehaathemes_spt_field[phtspt-hierarchical]">
 				<option value="no" <?php $hierarchical ? selected( $hierarchical, 'no' ) : 'selected'; ?>><?php _e( 'Not hierarchical, like tags', $this->plugin_name ); ?></option>
 				<option value="yes" <?php $hierarchical ? selected( $hierarchical, 'yes' ) : ''; ?>><?php _e( 'Hierarchical, like categories', $this->plugin_name ); ?></option>		
 			</select>
@@ -109,7 +109,7 @@ class PHT_Simple_Post_Types_Admin_Display {
 		<div class="form-field">
 			
 			<?php foreach ( $this->options['data']['post_type'] as $post_type_key => $post_type_array ) { ?>
-				<input type="checkbox" id="phtspt-object-type-<?php echo $key;?>-<?php echo $post_type_key;?>" name="phtspt_field[phtspt-object-type][]" value="<?php echo $post_type_key;?>" <?php checked( in_array( $post_type_key, $object_types ) ) ?>/>
+				<input type="checkbox" id="phtspt-object-type-<?php echo $key;?>-<?php echo $post_type_key;?>" name="pehaathemes_spt_field[phtspt-object-type][]" value="<?php echo $post_type_key;?>" <?php checked( in_array( $post_type_key, $object_types ) ) ?>/>
 				<label for="phtspt-object-type-<?php echo $key;?>-<?php echo $post_type_key;?>" class="phtspt-label--inline"><?php echo $post_type_array['name']; ?></label>								
 			<?php } ?>
 			<div class='phtspt-legend'><?php _e( 'Name of the object type for the taxonomy object.', $this->plugin_name ); ?></div>

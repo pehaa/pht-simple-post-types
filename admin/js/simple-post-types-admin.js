@@ -18,15 +18,15 @@
 		var 
 		$form = $( '.phtspt-form-add' ),
 		
-		registeredPostTypesArray = $.map( phtspt_data.reserved_terms.post_type, function( value, key ) {
+		registeredPostTypesArray = $.map( pehaathemes_spt_data.reserved_terms.post_type, function( value, key ) {
 			return value;
 		}),
 		
-		registeredTaxonomiesArray = $.map( phtspt_data.reserved_terms.taxonomy, function( value, key ) {
+		registeredTaxonomiesArray = $.map( pehaathemes_spt_data.reserved_terms.taxonomy, function( value, key ) {
 			return value;
 		}),
 		
-		errorMessages = $.map( phtspt_data.error_messages, function( value, key ) {
+		errorMessages = $.map( pehaathemes_spt_data.error_messages, function( value, key ) {
 			return value;
 		}),
 		
@@ -46,7 +46,7 @@
 
 		$(document).on( 'click', '.js-phtspt-confirm', function() {
 			
-			var confirmation = confirm( phtspt_data.confirmation );
+			var confirmation = confirm( pehaathemes_spt_data.confirmation );
 			
 			if ( !confirmation ) return false;
 			

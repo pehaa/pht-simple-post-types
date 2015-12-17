@@ -6,8 +6,8 @@
  * @link       https://github.com/pehaa/pht-simple-post-types
  * @since      1.0.0
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/admin
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/admin
  */
 
 
@@ -22,11 +22,11 @@ if ( ! defined( 'WPINC' ) ) {
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/admin
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/admin
  * @author     PeHaa THEMES <info@pehaa.com>
  */
-class PHT_Simple_Post_Types_Admin {
+class PeHaaThemes_Simple_Post_Types_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -60,8 +60,8 @@ class PHT_Simple_Post_Types_Admin {
 	private $capabilities;
 
 	private $submit = array(
-		'add_post_type' => 'phtspt_add_post_type',
-		'add_taxonomy' => 'phtspt_add_taxonomy',
+		'add_post_type' => 'pehaathemes_spt_add_post_type',
+		'add_taxonomy' => 'pehaathemes_spt_add_taxonomy',
 		'edit_taxonomy' => 'edit_taxonomy' );
 
 	/**
@@ -81,14 +81,14 @@ class PHT_Simple_Post_Types_Admin {
 			'add_taxonomy' => $this->plugin_name . '_add_taxonomy' ,
 			'edit_taxonomy' => $this->plugin_name . '_edit_taxonomy' );
 		$this->capabilities = apply_filters( $this->plugin_name . '_required_capabilities', 'edit_theme_options' );
-		$this->options = PHT_Simple_Post_Types::$options;
+		$this->options = PeHaaThemes_Simple_Post_Types::$options;
 
 		$this->load_dependencies();
 
 	}
 
 	private function load_dependencies() {
-		require_once 'class-simple-post-types-validation.php';
+		require_once 'class-pht-simple-post-types-validation.php';
 	}
 
 	public static function get_reserved_terms() {
@@ -190,7 +190,7 @@ class PHT_Simple_Post_Types_Admin {
 	public function enqueue_styles() {
 
 		if ( $this->viewing_this_plugin() ) {
-			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/simple-post-types-admin.min.css', array(), $this->version, 'all' );
+			wp_enqueue_style( $this->plugin_name . '-admin-style', plugin_dir_url( __FILE__ ) . 'css/simple-post-types-admin.min.css', array(), $this->version, 'all' );
 		}
 
 	}
@@ -208,11 +208,11 @@ class PHT_Simple_Post_Types_Admin {
 			wp_enqueue_script( $this->plugin_name . '-admin-script', plugin_dir_url( __FILE__ ) . 'js/simple-post-types-admin.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-accordion', 'jquery-effects-core' ), $this->version, false );
 			wp_localize_script(
 				'jquery',
-				'phtspt_data',
+				'pehaathemes_spt_data',
 				array(
 					'reserved_terms' => self::get_reserved_terms(),
 					'error_messages' => $notifications['error'],
-					'confirmation'=> apply_filters( 'phtspt_confirmation_question' , __( 'Are you sure you want to unregister this item?', $this->plugin_name ) ) )
+					'confirmation'=> apply_filters( 'pehaathemes_spt_confirmation_question' , __( 'Are you sure you want to unregister this item?', $this->plugin_name ) ) )
 			);
 		}
 
@@ -273,9 +273,9 @@ class PHT_Simple_Post_Types_Admin {
 			return;
 		}
 
-		require_once 'class-simple-post-types-display.php';
-		$display = new PHT_Simple_Post_Types_Admin_Display( $this->plugin_name, $this->version );
-		include_once 'partials/simple-post-types-admin-display.php';
+		require_once 'class-pht-simple-post-types-display.php';
+		$display = new PeHaaThemes_Simple_Post_Types_Admin_Display( $this->plugin_name, $this->version );
+		include_once 'partials/pht-simple-post-types-admin-display.php';
 
 	}
 
@@ -307,7 +307,7 @@ class PHT_Simple_Post_Types_Admin {
 
 			check_admin_referer( $this->nonce['add_' . $itemtype] );
 
-			$validator = new PHT_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
+			$validator = new PeHaaThemes_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
 
 			if ( $validator->validate( $_POST, 'add', $itemtype ) ) {
 
@@ -333,11 +333,11 @@ class PHT_Simple_Post_Types_Admin {
 
 	private function update_options_on_edit_taxonomy() {
 
-		if ( isset( $_POST[ $this->submit['edit_taxonomy'] ] ) && isset( $_POST['phtspt_field']['key'] ) ) {
+		if ( isset( $_POST[ $this->submit['edit_taxonomy'] ] ) && isset( $_POST['pehaathemes_spt_field']['key'] ) ) {
 
-			check_admin_referer( $this->nonce['edit_taxonomy'] . '_' .  $_POST['phtspt_field']['key'] );
+			check_admin_referer( $this->nonce['edit_taxonomy'] . '_' .  $_POST['pehaathemes_spt_field']['key'] );
 
-			$validator = new PHT_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
+			$validator = new PeHaaThemes_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
 
 			if ( $validator->validate( $_POST, 'edit', 'taxonomy' ) ) {
 
@@ -358,7 +358,7 @@ class PHT_Simple_Post_Types_Admin {
 
 		if ( isset( $_GET['_wpnonce'] ) && wp_verify_nonce( $_GET['_wpnonce'], $this->plugin_name .'_' . $itemtype . '_delete_nonce' ) ) {
 
-			$validator = new PHT_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
+			$validator = new PeHaaThemes_Simple_Post_Types_Validation( $this->plugin_name, $this->version );
 
 			if ( $validator->validate( $_GET, 'delete', $itemtype ) ) {
 
@@ -435,17 +435,6 @@ class PHT_Simple_Post_Types_Admin {
 					'12' => __( 'Invalid type.', $this->plugin_name ),
 				)
 			) );
-	}
-
-	public function add_custom_post_types_to_fpb( $array ) {
-
-		if ( ! is_array( PHT_Simple_Post_Types::$options['data']['post_type'] ) ) return $array;
-
-		foreach ( PHT_Simple_Post_Types::$options['data']['post_type'] as $key => $post_type_array ) {
-			$array[ $key ] = $post_type_array['name'];
-		}
-
-		return $array;
 	}
 
 }

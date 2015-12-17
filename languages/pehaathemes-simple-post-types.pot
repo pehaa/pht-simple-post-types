@@ -2,9 +2,9 @@
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: PeHaa Themes Simple Post Types 1.0.3\n"
+"Project-Id-Version: PeHaa Themes Simple Post Types 1.1.0\n"
 "Report-Msgid-Bugs-To: info@pehaa.com\n"
-"POT-Creation-Date: 2015-11-19 07:46:27+00:00\n"
+"POT-Creation-Date: 2015-12-17 10:47:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,302 +13,302 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
 
-#: admin/class-simple-post-types-admin.php:215
+#: admin/class-pht-simple-post-types-admin.php:215
 msgid "Are you sure you want to unregister this item?"
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:255
+#: admin/class-pht-simple-post-types-admin.php:255
 msgid "Simple Post Types & Taxonomies"
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:256
+#: admin/class-pht-simple-post-types-admin.php:256
 msgid "PHT SPTypes"
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:415
+#: admin/class-pht-simple-post-types-admin.php:415
 msgid "Custom Post Type has been successfully registered."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:416
+#: admin/class-pht-simple-post-types-admin.php:416
 msgid "Custom Taxonomy has been successfully registered."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:417
+#: admin/class-pht-simple-post-types-admin.php:417
 msgid "Custom Post Type has been successfully unregistered."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:418
+#: admin/class-pht-simple-post-types-admin.php:418
 msgid "Custom Taxonomy has been successfully unregistered."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:419
+#: admin/class-pht-simple-post-types-admin.php:419
 msgid "Custom Post Type has been successfully modified."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:420
+#: admin/class-pht-simple-post-types-admin.php:420
 msgid "Custom Taxonomy has been successfully modified."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:423
+#: admin/class-pht-simple-post-types-admin.php:423
 msgid "The Custom Post Type/Taxonomy could not have been registered."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:424
+#: admin/class-pht-simple-post-types-admin.php:424
 msgid "The Custom Post Type that you are trying to delete does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:425
+#: admin/class-pht-simple-post-types-admin.php:425
 msgid "The Custom Taxonomy that you are trying to delete does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:426
+#: admin/class-pht-simple-post-types-admin.php:426
 msgid ""
 "The Custom Post Type slug cannot contain other characters that digits, "
 "lowercase letters and the underscores."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:427
+#: admin/class-pht-simple-post-types-admin.php:427
 msgid ""
 "The Custom Taxonomy slug cannot contain other characters that digits, "
 "lowercase letters and the underscores."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:428
+#: admin/class-pht-simple-post-types-admin.php:428
 msgid "All required fields must be filled in."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:429
+#: admin/class-pht-simple-post-types-admin.php:429
 msgid ""
 "The submitted Custom Post Type name already exists or is a reserved "
 "WordPress term and cannot be overridden."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:430
+#: admin/class-pht-simple-post-types-admin.php:430
 msgid ""
 "The submitted Custom Taxonomy name already exists or is a reserved "
 "WordPress term and cannot be overridden."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:431
+#: admin/class-pht-simple-post-types-admin.php:431
 msgid ""
 "The labels cannot contain other characters than letters, spaces, hyphens "
 "and underscores (max. length is 15 chars)."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:432
+#: admin/class-pht-simple-post-types-admin.php:432
 msgid "The Custom Post Type that you are trying to modify does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:433
+#: admin/class-pht-simple-post-types-admin.php:433
 msgid "The Custom Taxonomy that you are trying to delete or modify does not exist."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:434
+#: admin/class-pht-simple-post-types-admin.php:434
 msgid "Invalid object type."
 msgstr ""
 
-#: admin/class-simple-post-types-admin.php:435
+#: admin/class-pht-simple-post-types-admin.php:435
 msgid "Invalid type."
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:72
+#: admin/class-pht-simple-post-types-display.php:72
 msgid "New custom post type slug (required):"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:72
+#: admin/class-pht-simple-post-types-display.php:72
 msgid "New custom taxonomy slug:"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:73
+#: admin/class-pht-simple-post-types-display.php:73
 msgid "Put a unique name here"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:79
+#: admin/class-pht-simple-post-types-display.php:79
 msgid "Custom post type name in plural form (required):"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:79
+#: admin/class-pht-simple-post-types-display.php:79
 msgid "Custom taxonomy name (plural form):"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:80
-#: admin/class-simple-post-types-display.php:88
+#: admin/class-pht-simple-post-types-display.php:80
+#: admin/class-pht-simple-post-types-display.php:88
 msgid "Put a name here"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:81
+#: admin/class-pht-simple-post-types-display.php:81
 msgid ""
 "General name for post type, <b>usually plural.</b> This string will be also "
 "used  for menu items."
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:81
+#: admin/class-pht-simple-post-types-display.php:81
 msgid ""
 "General name for taxonomies, <b>usually plural.</b> This string will be "
 "also used  for menu items."
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:87
+#: admin/class-pht-simple-post-types-display.php:87
 msgid "Custom post type name in singular form (required):"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:87
+#: admin/class-pht-simple-post-types-display.php:87
 msgid "Custom taxonomy name (singular form):"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:89
+#: admin/class-pht-simple-post-types-display.php:89
 msgid ""
 "Name for one object of this post type. Also used for the \"Add New\" "
 "dropdown on admin bar. "
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:89
+#: admin/class-pht-simple-post-types-display.php:89
 msgid "Name for one object of this taxonomy."
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:97
+#: admin/class-pht-simple-post-types-display.php:97
 msgid "Hierarchical"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:99
+#: admin/class-pht-simple-post-types-display.php:99
 msgid "Not hierarchical, like tags"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:100
+#: admin/class-pht-simple-post-types-display.php:100
 msgid "Hierarchical, like categories"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:102
+#: admin/class-pht-simple-post-types-display.php:102
 msgid ""
 "Is this taxonomy hierarchical (have descendants) like categories or not "
 "hierarchical like tags?"
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:115
+#: admin/class-pht-simple-post-types-display.php:115
 msgid "Name of the object type for the taxonomy object."
 msgstr ""
 
-#: admin/class-simple-post-types-display.php:132
+#: admin/class-pht-simple-post-types-display.php:132
 msgid ""
 "The unique slug for your post type, max. 20 characters, can not contain "
 "capital letters or spaces. Don't use any of the following terms: %s"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:29
+#: admin/partials/pht-simple-post-types-admin-display.php:29
 msgid "Registered custom post types and taxonomies"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:33
+#: admin/partials/pht-simple-post-types-admin-display.php:33
 msgid "Taxonomies:"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:33
+#: admin/partials/pht-simple-post-types-admin-display.php:33
 msgid "Post types:"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:36
+#: admin/partials/pht-simple-post-types-admin-display.php:36
 msgid "Slug"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:37
+#: admin/partials/pht-simple-post-types-admin-display.php:37
 msgid "Name"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:48
+#: admin/partials/pht-simple-post-types-admin-display.php:48
 msgid "Unregister"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:56
+#: admin/partials/pht-simple-post-types-admin-display.php:56
 msgid "Quick edit"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:69
+#: admin/partials/pht-simple-post-types-admin-display.php:69
 msgid "Submit"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:86
+#: admin/partials/pht-simple-post-types-admin-display.php:86
 msgid "Add new custom post type:"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:98
-#: admin/partials/simple-post-types-admin-display.php:123
+#: admin/partials/pht-simple-post-types-admin-display.php:98
+#: admin/partials/pht-simple-post-types-admin-display.php:123
 msgid "Register"
 msgstr ""
 
-#: admin/partials/simple-post-types-admin-display.php:106
+#: admin/partials/pht-simple-post-types-admin-display.php:106
 msgid "Add new custom taxonomy:"
 msgstr ""
 
-#: includes/class-simple-post-types.php:287
-#: includes/class-simple-post-types.php:335
+#: includes/class-pht-simple-post-types.php:285
+#: includes/class-pht-simple-post-types.php:333
 msgid "Parent %s:"
 msgstr ""
 
-#: includes/class-simple-post-types.php:288
-#: includes/class-simple-post-types.php:336
+#: includes/class-pht-simple-post-types.php:286
+#: includes/class-pht-simple-post-types.php:334
 msgid "All %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:289
-#: includes/class-simple-post-types.php:337
+#: includes/class-pht-simple-post-types.php:287
+#: includes/class-pht-simple-post-types.php:335
 msgid "View %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:290
-#: includes/class-simple-post-types.php:338
+#: includes/class-pht-simple-post-types.php:288
+#: includes/class-pht-simple-post-types.php:336
 msgid "Add New %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:291
-#: includes/class-simple-post-types.php:339
+#: includes/class-pht-simple-post-types.php:289
+#: includes/class-pht-simple-post-types.php:337
 msgid "Add New"
 msgstr ""
 
-#: includes/class-simple-post-types.php:292
-#: includes/class-simple-post-types.php:340
+#: includes/class-pht-simple-post-types.php:290
+#: includes/class-pht-simple-post-types.php:338
 msgid "Edit %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:293
+#: includes/class-pht-simple-post-types.php:291
 msgid "New %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:294
-#: includes/class-simple-post-types.php:342
+#: includes/class-pht-simple-post-types.php:292
+#: includes/class-pht-simple-post-types.php:340
 msgid "Search %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:295
-#: includes/class-simple-post-types.php:343
+#: includes/class-pht-simple-post-types.php:293
+#: includes/class-pht-simple-post-types.php:341
 msgid "Not found"
 msgstr ""
 
-#: includes/class-simple-post-types.php:296
-#: includes/class-simple-post-types.php:344
+#: includes/class-pht-simple-post-types.php:294
+#: includes/class-pht-simple-post-types.php:342
 msgid "Not found in Trash"
 msgstr ""
 
-#: includes/class-simple-post-types.php:334
+#: includes/class-pht-simple-post-types.php:332
 msgid "Parent %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:341
+#: includes/class-pht-simple-post-types.php:339
 msgid "Update %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:345
+#: includes/class-pht-simple-post-types.php:343
 msgid "New %s Name"
 msgstr ""
 
-#: includes/class-simple-post-types.php:346
+#: includes/class-pht-simple-post-types.php:344
 msgid "Separate %s with commas"
 msgstr ""
 
-#: includes/class-simple-post-types.php:347
+#: includes/class-pht-simple-post-types.php:345
 msgid "Add or remove %s"
 msgstr ""
 
-#: includes/class-simple-post-types.php:348
+#: includes/class-pht-simple-post-types.php:346
 msgid "Choose from the most used %s"
 msgstr ""
 

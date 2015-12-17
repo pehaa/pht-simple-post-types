@@ -9,8 +9,8 @@
  * @link       https://github.com/pehaa/pht-simple-post-types
  * @since      1.0.0
  *
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/includes
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/includes
  */
 
 // If this file is called directly, abort.
@@ -28,11 +28,11 @@ if ( ! defined( 'WPINC' ) ) {
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    PHT_Simple_Post_Types
- * @subpackage PHT_Simple_Post_Types/includes
+ * @package    PeHaaThemes_Simple_Post_Types
+ * @subpackage PeHaaThemes_Simple_Post_Types/includes
  * @author     PeHaa THEMES <info@pehaa.com>
  */
-class PHT_Simple_Post_Types {
+class PeHaaThemes_Simple_Post_Types {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -40,7 +40,7 @@ class PHT_Simple_Post_Types {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      PHT_Simple_Post_Types_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      PeHaaThemes_Simple_Post_Types_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -62,7 +62,7 @@ class PHT_Simple_Post_Types {
 	 */
 	protected $version;
 
-	protected $options_slug = 'pht_simple_post_types';
+	protected $options_slug = 'pehaathemes_simple_post_types';
 
 	public static $options;
 
@@ -81,8 +81,8 @@ class PHT_Simple_Post_Types {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'pht-simple-post-types';
-		$this->version = '1.0.0';
+		$this->plugin_name = 'pehaathemes-simple-post-types';
+		$this->version = '1.1.0';
 
 		self::$options = array(
 			'slug' => $this->options_slug,
@@ -119,27 +119,27 @@ class PHT_Simple_Post_Types {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-simple-post-types-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-pht-simple-post-types-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-simple-post-types-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-pht-simple-post-types-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-simple-post-types-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-pht-simple-post-types-admin.php';
 
-		$this->loader = new PHT_Simple_Post_Types_Loader();
+		$this->loader = new PeHaaThemes_Simple_Post_Types_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the PHT_Simple_Post_Types_i18n class in order to set the domain and to register the hook
+	 * Uses the PeHaaThemes_Simple_Post_Types_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -147,7 +147,7 @@ class PHT_Simple_Post_Types {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new PHT_Simple_Post_Types_i18n();
+		$plugin_i18n = new PeHaaThemes_Simple_Post_Types_i18n();
 		$plugin_i18n->set_domain( $this->get_plugin_name() );
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
@@ -163,14 +163,12 @@ class PHT_Simple_Post_Types {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new PHT_Simple_Post_Types_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new PeHaaThemes_Simple_Post_Types_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'update_options' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu' );
-		$this->loader->add_filter( 'phtpb_available_post_types', $plugin_admin, 'add_custom_post_types_to_fpb' );
-
 
 	}
 
@@ -199,7 +197,7 @@ class PHT_Simple_Post_Types {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    PHT_Simple_Post_Types_Loader    Orchestrates the hooks of the plugin.
+	 * @return    PeHaaThemes_Simple_Post_Types_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;
@@ -296,7 +294,7 @@ class PHT_Simple_Post_Types {
 			'not_found_in_trash'  => __( 'Not found in Trash', $this->plugin_name ),
 		);
 
-		return apply_filters( $key .'_phtspt_post_type_labels', $labels, $array );
+		return apply_filters( $key .'_pehaathemes_spt_post_type_labels', $labels, $array );
 
 	}
 
@@ -318,7 +316,7 @@ class PHT_Simple_Post_Types {
 			'query_var' => true
 		);
 
-		return apply_filters( $key .'_phtspt_post_type_args', $args, $key, $array );
+		return apply_filters( $key .'_pehaathemes_spt_post_type_args', $args, $key, $array );
 		
 	}
 
@@ -348,7 +346,7 @@ class PHT_Simple_Post_Types {
 			'choose_from_most_used'      => sprintf( __( 'Choose from the most used %s', $this->plugin_name ), $name )
 			);
 
-		return apply_filters( $key .'_phtspt_taxonomy_labels', $labels, $array );
+		return apply_filters( $key .'_pehaathemes_spt_taxonomy_labels', $labels, $array );
 
 	}
 
@@ -369,14 +367,14 @@ class PHT_Simple_Post_Types {
 				 )
 			);
 
-		return apply_filters( $key .'_phtspt_taxonomy_args', $args, $key, $array );
+		return apply_filters( $key .'_pehaathemes_spt_taxonomy_args', $args, $key, $array );
 		
 	}
 
 	public function conditional_flush_rewrire_rules_after_plugin_activate() {
 		
-		if ( get_option( PHT_SPT_ACTIVATION_DATA_FIELD ) ) {
-			update_option( PHT_SPT_ACTIVATION_DATA_FIELD, false );
+		if ( get_option( PEHAATHEMES_SPT_ACTIVATION ) ) {
+			update_option( PEHAATHEMES_SPT_ACTIVATION, false );
 			flush_rewrite_rules();			
 		}
 		
