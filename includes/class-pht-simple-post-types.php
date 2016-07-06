@@ -82,7 +82,7 @@ class PeHaaThemes_Simple_Post_Types {
 	public function __construct() {
 
 		$this->plugin_name = 'pehaathemes-simple-post-types';
-		$this->version = '1.1.0';
+		$this->version = '1.2.0';
 
 		self::$options = array(
 			'slug' => $this->options_slug,

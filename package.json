@@ -1,6 +1,6 @@
 {
   "name": "pehaathemes-simple-post-types",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A WordPress plugin. Adds custom post types and taxonomies.",
   "main": "pht-simple-post-types.php",
   "scripts": {
@@ -13,13 +13,13 @@
   "keywords": [
     "wordpress"
   ],
-  "tested" : "4.4",
+  "tested" : "4.6",
   "author": "PeHaa THEMES",
   "author_url" : "http://wptemplates.pehaa.com",
   "license": "GPL",
   "plugin_name" : "PeHaa Themes Simple Post Types",
   "download_url" : "http://wp-plugins.pehaa.com/pht-simple-post-types/pht-simple-post-types.zip",
-  "changelog": "<strong>1.1.0</strong><ul><li>Changed Prefixes and Class Names</li><li>removed phtpb_available_post_types filter</li><strong>1.0.4</strong><ul><li>Updated compability info</li></ul><strong>1.0.3</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.2</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.1</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.0</strong><p>Release</p>",
+  "changelog": "<strong>1.2.0</strong><ul><li>Update update-plugin-checker</li><li>Fixed css styles (admin page)</li></ul><strong>1.1.0</strong><ul><li>Changed Prefixes and Class Names</li><li>Removed phtpb_available_post_types filter</li><strong>1.0.4</strong><ul><li>Updated compability info</li></ul><strong>1.0.3</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.2</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.1</strong><ul><li>Updated plugin-update-checker</li></ul><strong>1.0.0</strong><p>Release</p>",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-copy": "~0.5.0",

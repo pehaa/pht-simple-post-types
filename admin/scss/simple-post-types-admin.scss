@@ -68,12 +68,14 @@ div.phtspt-message {
 	i {position:absolute; right:0; top:0}
 	&.ui-state-active i {-webkit-transform:rotate(45deg); transform:rotate(45deg)}
 }
-.phtspt-wrap h2 {
+.phtspt-wrap h2:first-child {
 	padding:16px;
 	margin:0 0 16px;
 	border-radius:3px;
-	background:grey;
-	color:#fff
+	background:#444;
+	color:#fff;
+	font-size:18px;
+	line-height: 1.33333;
 }
 .phtspt-section h3 {
 	margin:0;
@@ -87,7 +89,7 @@ div.phtspt-message {
 	padding-right:1.5rem;
 
 }
-$legend_bg : PEACHPUFF;
+$legend_bg : #c9dee6;
 .phtspt-legend {
 	font-size:12px;
 	padding:.25rem .75rem;
@@ -119,6 +121,7 @@ $legend_bg : PEACHPUFF;
 	i {font-size:16px; line-height:inherit}
 	min-width:120px;
 	text-align: center;
+	text-shadow:none;
 }
 .phtspt-form .phtspt-button-add {
 	width:100%;
@@ -131,7 +134,7 @@ $legend_bg : PEACHPUFF;
 	line-height:24px;
 	&:hover {background:darken($red,10);border-color:darken($red,20);}
 }
-.phtspt-form .phtspt-button-add:hover, .phtspt-section .button-primary:hover {
+.phtspt-form .phtspt-button-add:hover, .phtspt-section .button-primary:hover,.phtspt-form .phtspt-button-add:focus, .phtspt-section .button-primary:focus  {
 	box-shadow:none;
 }
 
