@@ -227,17 +227,23 @@ class PeHaaThemes_Simple_Post_Types_Admin {
 	 */
 	private function viewing_this_plugin() {
 
-		if ( ! isset( $this->plugin_screen_hook_suffix ) )
+		if ( ! isset( $this->plugin_screen_hook_suffix ) ) {
 			return false;
-
+		}
+			
 		$screen = get_current_screen();
 
-		if ( !isset( $screen->id ) ) return false;
-
-		if ( in_array( $screen->id, $this->plugin_screen_hook_suffix ) )
-			return true;
-		else
+		if ( !isset( $screen->id ) ) {
 			return false;
+		}
+
+		if ( in_array( $screen->id, $this->plugin_screen_hook_suffix ) ) {
+			return true;
+		} 
+		
+		return false;
+		
+			
 	}
 
 	/**
